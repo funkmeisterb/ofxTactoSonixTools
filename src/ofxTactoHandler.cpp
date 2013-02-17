@@ -197,7 +197,7 @@ void ofxTactoHandler::AppendBlob(ofxTactoBlob newblob)
 	touchArgs.x = x;
 	touchArgs.y = y;
 	touchArgs.id = touchId;
-	ofNotifyEvent(ofEvents.touchDown, touchArgs);
+	ofNotifyEvent(ofEvents().touchDown, touchArgs);
 }
 
 /**
@@ -211,7 +211,7 @@ void ofxTactoHandler::touchMoved(float x, float y, int touchId)
 	touchArgs.x = x;
 	touchArgs.y = y;
 	touchArgs.id = touchId;
-	ofNotifyEvent(ofEvents.touchMoved, touchArgs);
+	ofNotifyEvent(ofEvents().touchMoved, touchArgs);
 }
 
 /**
@@ -225,7 +225,7 @@ void ofxTactoHandler::touchUp(float x, float y, int touchId)
 	touchArgs.x = x;
 	touchArgs.y = y;
 	touchArgs.id = touchId;
-	ofNotifyEvent(ofEvents.touchUp, touchArgs);
+	ofNotifyEvent(ofEvents().touchUp, touchArgs);
 }
 
 /**
@@ -239,5 +239,5 @@ void ofxTactoHandler::touchDoubleTap(float x, float y, int touchId)
 	touchArgs.x = x;
 	touchArgs.y = y;
 	touchArgs.id = touchId;
-	ofNotifyEvent(ofEvents.touchDoubleTap, touchArgs);
+	ofNotifyEvent(ofEvents().touchDoubleTap, touchArgs);
 }
